@@ -1,0 +1,10 @@
+# cspell-tools: keep-case no-split
+hmac
+jiff
+reqwest
+rustls
+serde
+taplo
+thiserror
+tokio
+urlencoding

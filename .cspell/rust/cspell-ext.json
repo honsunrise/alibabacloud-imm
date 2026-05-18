@@ -1,0 +1,36 @@
+// cSpell Settings
+{
+    "id": "rust",
+    "name": "Rust",
+    "description": "Rust Keyword Dictionary",
+    "readonly": true,
+    "dictionaryDefinitions": [
+        {
+            "name": "rust",
+            "path": "./rust.txt",
+            "description": "Rust Keyword Dictionary"
+        },
+        {
+            "name": "crates",
+            "path": "./crates.txt",
+            "description": "Crates Dictionary"
+        },
+        {
+            "name": "toolchain",
+            "path": "./toolchain.txt",
+            "description": "Toolchain Dictionary"
+        }
+    ],
+    "dictionaries": [],
+    "languageSettings": [
+        {
+            "languageId": "*",
+            "locale": "*",
+            "includeRegExpList": [],
+            "ignoreRegExpList": [],
+            "patterns": [],
+            "dictionaries": ["rust", "crates", "toolchain"],
+            "dictionaryDefinitions": []
+        }
+    ]
+}

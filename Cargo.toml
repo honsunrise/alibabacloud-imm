@@ -1,0 +1,45 @@
+[package]
+name = "alibabacloud-imm"
+version = "0.1.0"
+authors = ["Honsun Zhu <honsun@linux.com>"]
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/honsunrise/alibabacloud-imm"
+documentation = "https://docs.rs/alibabacloud-imm"
+readme = "README.md"
+categories = ["web-programming", "api-bindings"]
+keywords = ["imm", "alibaba-cloud", "media", "ai", "image-processing"]
+description = "A modern, easy-to-use, and reqwest-powered Rust SDK for Alibaba Cloud Intelligent Media Management (IMM)"
+
+publish = true
+
+[features]
+default = ["default-tls"]
+default-tls = ["reqwest/default-tls"]
+rustls = ["reqwest/rustls"]
+rustls-no-provider = ["reqwest/rustls-no-provider"]
+native-tls = ["reqwest/native-tls"]
+native-tls-vendored = ["reqwest/native-tls-vendored"]
+native-tls-no-alpn = ["reqwest/native-tls-no-alpn"]
+native-tls-vendored-no-alpn = ["reqwest/native-tls-vendored-no-alpn"]
+
+[dependencies]
+hex = "0.4"
+hmac = "0.13"
+http = "1.0"
+jiff = { version = "0.2", features = ["serde"] }
+percent-encoding = "2.3"
+reqwest = { version = "0.13", default-features = false, features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.11"
+thiserror = "2.0"
+tokio = { version = "1", default-features = false, features = ["sync", "fs"] }
+tracing = "0.1"
+url = "2.5"
+uuid = { version = "1.0", features = ["v4"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+tracing-subscriber = "0.3"
